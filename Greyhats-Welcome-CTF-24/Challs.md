@@ -5,7 +5,7 @@ Write nonsense until we reach the return line, then write the flag address in li
 
 Boss Fight (PWN) - Solved by yalim
 Make the boss' health overflow past 32768 - idk how I didn't try or think of this
-![alt text](.png)
+![alt text](BossFight.png)
 
 Greyllm (MISC)
 1. Asked the chatbot for the flag
