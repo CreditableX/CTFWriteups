@@ -1,9 +1,9 @@
 
-Stack BOF School (PWN) - Solved by yalim
+Stack BOF School (PWN) - Solved by yalim  
 Write nonsense until we reach the return line, then write the flag address in little endian
 ![alt text](StackBOFSchool.png)
 
-Boss Fight (PWN) - Solved by yalim
+Boss Fight (PWN) - Solved by yalim  
 Make the boss' health overflow past 32768 - idk how I didn't try or think of this
 ![alt text](BossFight.png)
 
@@ -55,7 +55,8 @@ No math crypto (CRYPTO)
 
 RSA (CRYPTO)
 1. Self-explanatory help: should read up more about it. Mainly GPT-ed
-----------------[parameters]-------------------
+
+params:
 p = 10918311508953460494712654527779080336321393782191731265090553157872794490868081977616381704507764350624871787735778119076851518302788040369052752258947443
 q = 13275551522486616735703446932912517581753633626519470930436586509196008502354746481220757134944626046803204486283771742983058840097159145430953539904641457
 e = 65537
