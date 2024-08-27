@@ -1,9 +1,9 @@
 
-Stack BOF School (PWN) - Solved by yalim  
+**Stack BOF School (PWN) - Solved by yalim ** 
 Write nonsense until we reach the return line, then write the flag address in little endian
 ![alt text](StackBOFSchool.png)
 
-Boss Fight (PWN) - Solved by yalim  
+Boss Fight (PWN) - Solved by yalim 
 Make the boss' health overflow past 32768 - idk how I didn't try or think of this
 ![alt text](BossFight.png)
 
@@ -21,7 +21,7 @@ Aimfactory (WEB)
 
 SQLi 1 (WEB)
 1. Command ' UNION SELECT 'admin' --, which creates the length of 1 and also removes password check
-Explanation (GPTed):
+Explanation (GPTed):  
 - '': This effectively makes the condition false for the original name = 'user', but it’s overridden by the UNION part.
 - UNION SELECT 'admin': The UNION clause combines the results of the original query with a new result set that contains 'admin'. This forces the query to return 'admin' as part of its results.
 - --: The comment ensures that the rest of the query (e.g., AND pass = 'w') is ignored.
@@ -54,35 +54,35 @@ No math crypto (CRYPTO)
 1. Use online site https://www.guballa.de/substitution-solver but flag points to https://quipqiup.com/
 
 RSA (CRYPTO)
-1. Self-explanatory help: should read up more about it. Mainly GPT-ed
+1. Self-explanatory help: should read up more about it. Mainly GPT-ed  
 
-params:
+params:  
 p = 10918311508953460494712654527779080336321393782191731265090553157872794490868081977616381704507764350624871787735778119076851518302788040369052752258947443
 q = 13275551522486616735703446932912517581753633626519470930436586509196008502354746481220757134944626046803204486283771742983058840097159145430953539904641457
 e = 65537
 
 
-----------------[setup]-------------------
-Here is the ciphertext, which is computed by c=m^e mod N where m is the message
+----------------[setup]-------------------  
+Here is the ciphertext, which is computed by c=m^e mod N where m is the message  
 c = 61226191959841950045593716714957920903275614998708269477340360680366946740283888881387574625517952478635163607888097067352357022416351774332376038367624778277846665884495960669358666648683563209730395154465529191828062452080845088668801418575950931935586241660354948285141585860605256948441228236614466025674
 
 
-----------------[step 1]-------------------
-To recover m, we first compute the private key d.
-d must satisfy the following equation: e*d = 1 mod [(p-1)(q-1)]
-Hint: look up modular inverse
+----------------[step 1]-------------------  
+To recover m, we first compute the private key d.  
+d must satisfy the following equation: e*d = 1 mod [(p-1)(q-1)]  
+Hint: look up modular inverse  
 d = 36589966977516346764375097952735197743969044262822125012495310835826761500264847089690866782274159568729451028295614769885536904984425569082540017876351868797447108183025174789916129327741822068618357854162185047029437708206901151183900602254316950608109486279721876125084536485295608578180893156014624029697
-----------------[step 2]-------------------
-Now, compute m=c^d mod (pq)
-Hint: look up modular exponentiation
+----------------[step 2]-------------------  
+Now, compute m=c^d mod (pq)  
+Hint: look up modular exponentiation  
 m = 4481624626718542717349837486688775099814995281362698048681549428000637959668628458054185647086618565781516614589000946128017437565
-----------------[flag]-------------------
-Now convert m to a string and submit it as a flag!
-Hint: pycryptodome long_to_bytes
-----------------[why does it work]-------------------
-Notice that x^(p-1) mod p = 1 and x^(q-1) mod q = 1 for any x (coprime to N)
-Hence x^[k*(p-1)(q-1)+1]=x mod (pq) for any k
-Hence (x^e)^d=x mod N for any x where N=pq
+----------------[flag]-------------------  
+Now convert m to a string and submit it as a flag!  
+Hint: pycryptodome long_to_bytes  
+----------------[why does it work]-------------------  
+Notice that x^(p-1) mod p = 1 and x^(q-1) mod q = 1 for any x (coprime to N)  
+Hence x^[k*(p-1)(q-1)+1]=x mod (pq) for any k  
+Hence (x^e)^d=x mod N for any x where N=pq  
 
 
 
