@@ -21,6 +21,7 @@ Aimfactory (WEB)
 
 SQLi 1 (WEB)
 1. Command ' UNION SELECT 'admin' --, which creates the length of 1 and also removes password check
+![alt text](SQLi1.png)
 Explanation (GPTed):  
 - '': This effectively makes the condition false for the original name = 'user', but it’s overridden by the UNION part.
 - UNION SELECT 'admin': The UNION clause combines the results of the original query with a new result set that contains 'admin'. This forces the query to return 'admin' as part of its results.
@@ -28,14 +29,16 @@ Explanation (GPTed):
 
 SQLi 2 (WEB)
 1. Same idea, find the user password instead
+![alt text](SQLi2.png)
 - ' UNION SELECT pass FROM users -- 
 
 PCAP 1 (FORENSICS)
 1. Open pcap in wireshark
 2. Follow the HTTP login stream
+![alt text](PCAP1.png)
 
 Lorem Ipsum (FORENSICS)
-1. Open in notepad, ctrl f -> flag was grey{l0r3M_1pSUm_3XifT0oL} so prob can use exif
+1. File was a PDF, opened in notepad, ctrl f -> flag was grey{l0r3M_1pSUm_3XifT0oL} so prob can use exif
 
 Hello kitty (FORENSICS)
 1. Tried a shit ton of cmd line tools (stegsolve / exiftools / xxd / steghide) -> all failed then just used https://futureboy.us/stegano/decode.pl and it worked WTF MAN
