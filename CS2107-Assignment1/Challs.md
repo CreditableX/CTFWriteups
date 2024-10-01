@@ -40,9 +40,10 @@ As the name suggests, we should probably test a frequency checker. Using the web
 
 H2. Re-al or Fa-ke
 The way the question is phrased makes me think that python’s rng is not actually rng. After a bit of research, I found this website that provides this explanation of how to crack the rng.
-![alt text](H2-1.png)
-Interesting! I wrote the following script to get the flag:
-![alt text](H2-2.png)
+![alt text](H2-1.png)  
+
+Interesting! I wrote the following script to get the flag:  
+![alt text](H2-2.png)  
 
 We get a number from the server 624 times to get the required data for the seed. Then, we send the next input almost immediately, and get the flag from the server!
 ![alt text](H2-3.png)
