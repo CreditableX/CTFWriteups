@@ -9,7 +9,7 @@ Looking at the name of the challenge it seemed like a caesar cipher. Let’s try
 We get the flag and submit it!
 
 E2. Birds of a Feather
-Got trolled so hard on this question. Turns out all there was to do was to search ‘bird cipher’ on google, which gave us this image.
+Got trolled so hard on this question. Turns out all there was to do was to search ‘bird cipher’ on google, which gave us this image.  
 ![alt text](E2.png)
 
 E3. Xoring gone wrong
@@ -28,7 +28,7 @@ This challenge was similar to one I had done in another CTF. We are given some v
 We follow these steps:
 -	d must satisfy the following equation: e*d = 1 mod [(p-1)(q-1)]
 -	m=c^d mod (pq)
--	convert the bytes to a string
+-	convert the bytes to a string  
 ![alt text](M2-1.png)
 ![alt text](M2-2.png)
 
