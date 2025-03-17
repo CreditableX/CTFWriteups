@@ -202,3 +202,40 @@ while (True):
 
 print(cracked)
 ```
+
+## Misc
+### Trapped in plain sight 1
+There is a flag in the directory but we are unable to read it.
+
+We try the standard methods of priv esc to find something, and running the command:
+```bash
+find / -perm -4000 -type f 2>/dev/null
+```
+We get an interesting result - `xxd` (hexdump) 
+
+![alt text](plainsightone1.png)
+
+We try to hexdump the flag and get the flag.
+
+![alt text](plainsightone2.png)
+
+### Trapped in plain sight 2
+Again, we try to use the standard prv esc methods and we get something when running
+```bash
+cat /etc/passwd
+```
+
+![alt text](plainsighttwo1.png)
+
+We see that there is a secret user with a tag `hunter2` - possible password?
+
+We then try to `ssh` with `secretuser:hunter2` and make it in.
+
+![alt text](plainsighttwo2.png)
+
+![alt text](plainsighttwo3.png)
+
+
+## Closing Thoughts
+I was excited when I saw the misc challs but sadly there wasn't more to them, was hoping for more of a box-like challenge but oh wells. Happy that I full cleared a category for the first time, more to come in the future.
+
