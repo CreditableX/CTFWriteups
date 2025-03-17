@@ -124,9 +124,9 @@ testVal = conn.recvline().decode()[34:66]
 
 Again, we do the same for the third block. We can see from the images below that the output is inconsistent, even when sent with the same payload. I have tried `hex(0x02) * 2` and `hex(0x03) * 3` which both gave correct results, and `hex(0x01)`, which gave both results below. (Would love an explanation if anyone is willing to share!)
 
-![alt text](image-6.png)  
+![alt text](ecb1.png)  
 
-![alt text](image-8.png)
+![alt text](ecb2.png)
 
 
 After all of that, we get the flag!  
