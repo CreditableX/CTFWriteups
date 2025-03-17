@@ -149,7 +149,7 @@ godload = '\x01' * 12 # 15
 # cracked = 'utflag{'  # 7
 
 # block 2
-# cracked = 'utflag{st0p_r0ll' # 16
+# cracked = 'utflag{st0p_r0ll' # 16=
 
 # block 3
 cracked = 'utflag{st0p_r0ll1ng_y0ur_0wn_crypt0' # 32
