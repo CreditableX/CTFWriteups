@@ -121,9 +121,9 @@ if __name__ == '__main__':
             print("Boh ㄟ( ▔, ▔ )ㄏ")
 ```
 
-First we see that we have to choose the index of 2 so that we can get `SENTENCES[2]` which has the flag. Afterwards, we also see that we need to input a number larger than 40 bits so that we get a return result of `encoded & bet` from generate. If we manage to submit a number that is equivalent to `0b111111...`, the result will simply be `encoded` (read up on `&` operator if unsure why), which is (some part of) the encoded flag. 
+First we see that we have to choose the index of 2 so that we can get `SENTENCES[2]` which has the flag. Afterwards, we also see that we need to input a number with a maximum of 40 active bits (number of `1`s in binary) so that we get a return result of `encoded & bet` from generate. If we submit a number that is equivalent to `0b111111...`, the result will simply be `encoded` (read up on `&` operator if unsure why), which is (some part of) the encoded flag. 
 
-Trying a 40-bit number only gives the last 5 chars of the flag as 8 bits correspond to 1 ASCII character. So, we try to put more 1s, but the system rejects it and returns `result=[]` for many of the cases. Additionally, there is a comment saying `why you're using 1s when 0s exist`, which gives us more hints.
+Trying a 40-bit number only gives the last 5 chars of the flag as 8 bits correspond to 1 ASCII character. So, we want  to put more 1s, but the system rejects it because of `bit_count`. Additionally, there is a comment saying `why you're using 1s when 0s exist`, which gives us more hints.
 
 Our finals solution is to then add 40 x `0` to the back of our original number, giving us `0b11111...0000...`. What this does is that we get the next 5 chars of the flag from the back, using the same idea as before. We trial the number of loops until we get the full flag displayed.
 
