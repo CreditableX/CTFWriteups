@@ -3,16 +3,21 @@
 ## Introduction
 FULL CLEAR CRYPTO BABY!! Stayed awake till like 3 to solve ECB, but it was so satisfying to get my first category full clear.
 
+[TEAM] Sanity Check  
+Rank: 227/859  
+Points: 2709 | base 1000
+
 ![alt text](cryptofullclear.png)
 
 ## Crypto
-### RSA | DCΔ
+### RSA | DCΔ [100 pts | 685 solves | 612 solves]
 Use [this website](https://www.dcode.fr/rsa-cipher) and key in the respective values for n, e and c. We can use this for both flags!  
 ![alt text](rsa.png)
 ![alt text](dcΔ.png)
 
 <br></br>
-### Autokey Cipher
+
+### Autokey Cipher [100 pts | 294 solves]
 We are given a string `lpqwma{rws_ywpqaauad_rrqfcfkq_wuey_ifwo_xlkvxawjh_pkbgrzf}`.
 We know that the first few letters of the string will be utflag, and so we engineer the autokey cipher based on that.
 
@@ -28,7 +33,7 @@ At this point the flag looks something like the image above. We can extend the k
 
 <br></br>
 
-### Espathra-Csatu-Banette
+### Espathra-Csatu-Banette [751 pts | 149 solves]
 A noob's version of ECB solve. Code is [here](ecb.py) for reference. Note: running code on the server is wonky, running the same payload mutiple times can lead to different results (from my own experience).
 
 ```python
@@ -204,7 +209,7 @@ print(cracked)
 ```
 
 ## Misc
-### Trapped in plain sight 1
+### Trapped in plain sight 1 [100 pts | 541 solves]
 There is a flag in the directory but we are unable to read it.
 
 We try the standard methods of priv esc to find something, and running the command:
@@ -219,7 +224,9 @@ We try to hexdump the flag and get the flag.
 
 ![alt text](plainsightone2.png)
 
-### Trapped in plain sight 2
+<br></br>
+
+### Trapped in plain sight 2 [100 pts | 347 solves]
 Again, we try to use the standard prv esc methods and we get something when running
 ```bash
 cat /etc/passwd

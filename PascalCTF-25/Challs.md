@@ -3,6 +3,7 @@
 ## Introduction
 Short 5 hour beginner CTF, did all crypto and some other easier ones. Nothing too difficult, nice practice.
 
+[INDIV]  
 Rank: 98/570  
 Points: 1313 | base 500
 
