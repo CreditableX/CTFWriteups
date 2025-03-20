@@ -5,3 +5,4 @@
 ### [Greyhats Welcome CTF 2024](./Greyhats-Welcome-CTF-24/Challs.md)
 ### [TISC 2024](./TISC-24/Challs.md)
 ### [UTCTF 2025](./UTCTF-25/Challs.md)
+### [PascalCTF 2025](./PascalCTF-25/Challs.md)
